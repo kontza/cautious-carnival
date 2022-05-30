@@ -61,7 +61,7 @@ def sort(direction, filename, output_file):
     df.sort_values(by=date_column, axis=0, ascending=direction, inplace=True)
     if output_file is None:
         output_file = sys.stdout
-    df[:5].to_csv(output_file, sep=";", doublequote=True, index=False)
+    df.to_csv(output_file, sep=";", doublequote=True, index=False)
 
 
 if __name__ == "__main__":
